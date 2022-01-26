@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
+    <link href="Style.css" rel="Stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+
+
+    <title>Principal</title>
+   
+</head>
+
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+   
+
+    <div class="container">
+        <div class="input-group my-2">
+            <input type="text" class="form-control my-2 mr-2" id="city" placeholder="city">
+            <input type="text" class="form-control my-2 mr-2" id="name" placeholder="name">
+
+            <div class="input-group-append my-2">
+                <button class="btn btn-sm btn-primary btn-block text-uppercase " id="boton" onclick="agregar()">Agregar</button>
+            </div>
+        </div>
+        </form>
+     
+
+
+
+        <table class="table my-3">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">city</th>
+                    <th scope="col">name</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="tabla">
+            </tbody>
+        </table>
+        
+        <button class="btn btn-danger" onclick="Salir()">Salir</button>
+ 
+    </div>
+
+
+
+
+    <script src="Second.js"></script>
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

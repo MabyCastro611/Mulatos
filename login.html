@@ -1,0 +1,114 @@
+<html>
+
+<head>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <title>lOgin</title>
+
+</head>
+
+<!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+
+<body>
+  <div class="container">
+    <div class="row my-5">
+
+
+      <div class="col-md-6">
+        <h5 class="Iniciar text-center">Sign In</h5>
+
+        <form class="form-signin">
+          <div class="form-label-group">
+            <input type="Email" id="email" class="form-control" placeholder="Email " required autofocus>
+            <label for="email2">Email </label>
+          </div>
+
+          <div class="form-label-group">
+            <input type="Password" id="password" class="form-control" placeholder="Password" required>
+            <label for="password2">Password</label>
+          </div>
+
+
+          <button class="btn btn-lg btn-primary btn-block text-uppercase" onclick="Login()">ingresar</button>
+
+        </form>
+      </div>
+
+      <div class="col-md-6">
+        <h5 class="Iniciar text-center">Register</h5>
+        <form class="form-Register">
+          <div id="label2" class="form-label2-group">
+            <input type="Email" id="email2" class="form-control" placeholder="Email " required>
+            <label for="email">Email </label>
+          </div>
+
+          <div id="label2" class="form-label2-group">
+            <input type="Password" id="password2" class="form-control" placeholder="Password" required>
+            <label for="password">Password</label>
+          </div>
+
+
+          <button class="btn btn-lg btn-primary btn-block text-uppercase" onclick="Register()">Register</button>
+
+        </form>
+      </div>
+
+
+
+    </div>
+  </div>
+  </div>
+
+  <script src="Nuevo.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyC_tL1QQgZFIc09-76KeJG2sLYXl3XrbBw",
+      authDomain: "mi-primer-proyecto-2f365.firebaseapp.com",
+      databaseURL: "https://mi-primer-proyecto-2f365.firebaseio.com",
+      projectId: "mi-primer-proyecto-2f365",
+      storageBucket: "mi-primer-proyecto-2f365.appspot.com",
+      messagingSenderId: "661625784258",
+      appId: "1:661625784258:web:1222e1bbe0394261da785b",
+      measurementId: "G-98YYYM0KF9"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    auth.onAuthStateChanged(function (user) {
+      if (user) {
+        // User is signed in.
+        var email = user.email;
+        // ...
+        //    document.getElementById('Login').innerHTML = "Logueado";
+        console.log('Usuario Logueado: ' + email);
+        window.location = "Principal.html";
+
+
+      } else {
+        // User is signed out.
+        // ...
+        //  document.getElementById('Login').innerHTML = "No Logueado";
+        console.log('usuario no logueado');
+
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>
